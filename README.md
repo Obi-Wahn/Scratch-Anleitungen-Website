@@ -10,6 +10,15 @@ nur als Lehrkraft im eigenen Unterricht genutzt werden, nicht öffentlich
 verteilt werden. Deshalb werden die PDFs **nicht** in dieses Repository
 oder auf GitHub Pages hochgeladen (`data/` steht in `.gitignore`).
 
+Die Materialien stammen von [AppCamps](https://www.appcamps.de). Auf den
+PDFs selbst ist ein CC-BY-SA-Logo abgedruckt, auf der Quell-Seite
+(fobizz.com, Sammlung „Programmieren mit Scratch") steht dagegen sowohl
+eine CC-BY-4.0-Angabe als auch der Hinweis, dass eine Weiterverbreitung
+nur mit ausdrücklicher Zustimmung von AppCamps erlaubt ist – das
+widerspricht sich teilweise. Ohne eindeutige Klärung (am besten direkt
+bei AppCamps nachfragen) bleiben die PDFs deshalb sicherheitshalber
+privat/lokal.
+
 Lege die Dateien stattdessen lokal auf deinem Rechner in einem Ordner
 namens `data/` ab, in Unterordnern nach Kategorie sortiert (genauso wie
 im ursprünglichen Ordner). Die Links in [`js/data.js`](js/data.js)
