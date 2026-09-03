@@ -61,6 +61,20 @@ function renderCategories() {
   ).join("");
 }
 
+async function showServerBanner() {
+  try {
+    const res = await fetch("server-info.json", { cache: "no-store" });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (!data.url) return;
+    const banner = document.getElementById("server-banner");
+    banner.textContent = `Diese Seite ist erreichbar unter: ${data.url}`;
+    banner.hidden = false;
+  } catch (err) {
+    // Kein lokaler Server aktiv (z.B. auf GitHub Pages) - Banner bleibt versteckt.
+  }
+}
+
 function setupSearch() {
   const input = document.getElementById("search");
   input.addEventListener("input", () => {
@@ -81,3 +95,4 @@ renderNav();
 renderOverviewButton();
 renderCategories();
 setupSearch();
+showServerBanner();

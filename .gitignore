@@ -3,3 +3,7 @@
 # Lege die Dateien lokal in diesen Ordner, sie bleiben dann nur auf
 # deinem Rechner - siehe README.md.
 /data/
+
+# Wird von start_server.py bei jedem Start neu erzeugt.
+/server-info.json
+__pycache__/

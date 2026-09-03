@@ -35,17 +35,35 @@ Alle Anleitungen und ihre Links stehen in einer einzigen Datei:
 Eine neue Kategorie hinzufügen funktioniert nach dem gleichen Muster –
 Details stehen als Kommentar am Anfang von `js/data.js`.
 
-## Lokal ansehen
+## Im Unterricht starten (lokales Netzwerk)
 
-Diese Seite besteht nur aus HTML/CSS/JS ohne Build-Schritt. Einfach
-`index.html` im Browser öffnen, oder z.B. mit Python einen kleinen
-Server starten:
+Am einfachsten mit dem mitgelieferten Skript:
+
+```bash
+python3 start_server.py
+```
+
+Das Skript ermittelt automatisch die IP-Adresse deines Laptops im
+aktuellen Netzwerk, startet den Server und zeigt die Adresse im Terminal
+**und** groß und gut lesbar oben auf der Startseite an. Die Schüler-PCs
+müssen im gleichen Netzwerk sein und diese Adresse im Browser öffnen,
+z.B. `http://192.168.1.42:8000`. Zum Beenden reicht Strg+C.
+
+Hinweise:
+- Beim ersten Start fragt die Firewall (Windows/macOS) eventuell, ob
+  Python im Netzwerk kommunizieren darf – das musst du erlauben.
+- Manche Schul-WLANs blockieren die Kommunikation zwischen Geräten im
+  selben Netz ("Client-Isolation"). Am besten vorher kurz mit einem
+  Schüler-PC testen.
+- Die IP-Adresse kann sich bei jedem Neustart ändern.
+
+Alternativ kannst du `index.html` auch einfach direkt im Browser öffnen
+(dann ohne Netzwerkzugriff für andere PCs), oder statt des Skripts einen
+einfachen Server ohne IP-Anzeige starten:
 
 ```bash
 python3 -m http.server 8000
 ```
-
-Danach im Browser `http://localhost:8000` öffnen.
 
 ## Veröffentlichen mit GitHub Pages
 
