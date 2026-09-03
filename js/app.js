@@ -4,6 +4,10 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
+function toHref(link) {
+  return escapeHtml(encodeURI(link));
+}
+
 function renderNav() {
   const nav = document.getElementById("toc");
   nav.innerHTML = CATEGORIES.map(
@@ -19,7 +23,7 @@ function renderOverviewButton() {
     el.removeAttribute("href");
   } else {
     el.textContent = OVERVIEW_RESOURCE.title;
-    el.href = OVERVIEW_RESOURCE.link;
+    el.href = encodeURI(OVERVIEW_RESOURCE.link);
     el.target = "_blank";
     el.rel = "noopener";
   }
@@ -31,7 +35,7 @@ function tutorialCard(tutorial) {
     : "";
   const hasLink = Boolean(tutorial.link);
   const action = hasLink
-    ? `<a class="card-link" href="${escapeHtml(tutorial.link)}" target="_blank" rel="noopener">Anleitung öffnen</a>`
+    ? `<a class="card-link" href="${toHref(tutorial.link)}" target="_blank" rel="noopener">Anleitung öffnen</a>`
     : `<span class="card-link is-disabled">Bald verfügbar</span>`;
 
   return `
