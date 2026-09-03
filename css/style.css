@@ -188,3 +188,12 @@ footer {
   padding: 2rem 1.5rem 3rem;
   font-size: 0.9rem;
 }
+
+footer p {
+  margin: 0.3rem auto;
+}
+
+footer .credits {
+  max-width: 40rem;
+  font-size: 0.8rem;
+}
